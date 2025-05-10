@@ -1,4 +1,4 @@
-# Welcome to MWeb
+# Welcome to MWeb  -ctrl + 1 (1级标题)
 
 MWeb is a professional Markdown writing, note taking, and static blog generator app for Mac, iPad, and iPhone. Here are some special features of MWeb.
 
@@ -90,7 +90,7 @@ Setting image width, For example: `![image description-w450](pic.jpg)`, -w450 me
 	  if(arg) {
 	    $.facebox({div:'#foo'})
 	  }
-
+	
 	}
 	```
 
@@ -182,9 +182,9 @@ mermaid is a popular drawing gallery. It supports flowcharts, sequence diagrams 
         John->Bob: How about you?
         Bob-->John: Jolly good!
     ```
- 
+
 **The result is:**
- 
+
 ```mermaid
 sequenceDiagram
     participant Alice
@@ -256,4 +256,88 @@ This is a footnote:[^1]
 <!-- more -->
 
 
+
+### FlowChat
+
+Using flowchat.js
+
+Input flow at language selete.
+
+`st`  variable declaration
+
+`start` type assign
+
+`建立连接` display content
+
+Reference: https://blog.csdn.net/qq_41725131/article/details/125771292?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-5-125771292-blog-90644019.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-5-125771292-blog-90644019.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=10
+
+##### sample:
+
+```flow
+st=>start: 建立连接
+op1=>operation: 查询缓存
+cond1=>condition: 是否命中
+op2=>operation: 未命中
+op3=>operation: 命中
+op3=>operation: 返回结果
+op4=>operation: 检查语法
+cond2=>condition: 是否正确
+oper1=>operation: 报错
+oper2=>operation: 报错
+op5=>operation: 解析SQL
+op6=>operation: 生成解析树
+cond3=>condition: 验证通过
+op7=>operation: 生成执行计划
+op8=>operation: 调用一个具体的存储引擎
+op9=>end: 访问存储层获取数据
+
+st->op1->cond1
+cond1(no)->op2
+cond1(yes)->op3
+op2->op4
+op4->cond2
+cond2(no)->oper1
+cond2(yes)->op5
+op5->op6
+op6->cond3
+cond3(no)->oper2
+cond3(yes)->op7
+op7->op8
+op8->op9
+
+```
+##### Sample2:
+```flow
+st=>start: 开始框
+op=>operation: 处理框
+op1=>operation: 处理框
+op2=>operation: 处理框
+op3=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+para=>parallel: 并行任务
+e1=>end: 结束框
+e2=>end: 结束框
+st->op->cond
+cond(yes,bottom)->para
+para(path1, right)->op1->e1
+para(path2, left)->op2->e1
+para(path3, bottom)->op3->e1
+cond(no)->e2
+
+```
+
+#### Sample3:
+
+```flow
+st=>start: 开始框
+op=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+sub=>subroutine: 子流程
+io=>inputoutput: 输入输出框
+e=>end: 结束框
+st->op->cond
+cond(yes,bottom)->io->e
+cond(no,left)->sub(top)->op
+
+```
 

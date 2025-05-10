@@ -35,6 +35,20 @@ git commit -m "an explanation for commit"
 
 
 
+#### git ignore書き方
+
+```
+sample.html		# ファイル名指定して、gitの管理外となります
+work/					# ディレクトリ名を指定して、gitの管理外となります
+*.html				# *を使うと特定の種類のファイルをgit管理外とします
+!sample.html	# !を使うとgitの管理とします。htmlファイルを管理外としますが、sample.htmlだけは管理とします
+
+```
+
+
+
+
+
 #### branch
 
 ###### view a list of branches
@@ -59,8 +73,8 @@ git branch -m <oldname> <newname>
 ###### switch branch
 
 ```
-git checkout brancthName	// switch to the branch
-git checkout -				// quickly s
+git switch brancthName	// switch to the branch
+git checkout -b newbranchName				// create a new branch and switch to
 ```
 
 

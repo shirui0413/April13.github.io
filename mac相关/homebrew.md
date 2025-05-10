@@ -7,7 +7,8 @@ brew list
 
 ### install package
 ```
-brew install package_name
+brew install package_name					  // CUI
+brew cast install package_name			// GUI
 ```
 
 ### uninstall package
