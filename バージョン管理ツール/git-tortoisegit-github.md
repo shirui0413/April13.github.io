@@ -60,7 +60,7 @@ git remote add origin https://github.com/shirui0413/sc_learning.git
 →リモートにpush
 
 ```
-git push origin master
+git push origin master(main)    // (remote repositoryname) (branch name)
 ```
 
 pushを実行すると、GitHubのログインダイアログを表示されて、emailとpasswordを入力して、プッシュを続ける。
