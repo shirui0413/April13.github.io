@@ -1,5 +1,10 @@
 # homebrew
 
+### homebrew install
+```
+homebrewを調べて、インストールコマンドからインストールを行う
+```
+
 ### conform installed software
 ```
 brew list
